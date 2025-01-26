@@ -1,15 +1,12 @@
 ﻿namespace StudentPortal.Web.Models.Entities
 {
-    public class Student
+    public class Kullanicilar
     {
+
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public string Email { get; set; }       
+        public string Email { get; set; }
         public string Phone { get; set; }
-        public string ImgUrl { get; set; }
-        public bool Subscribed { get; set; }
-
-      
     }
 }

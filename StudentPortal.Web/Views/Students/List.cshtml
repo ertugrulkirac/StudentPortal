@@ -13,8 +13,10 @@
 		<tr>
 			<th>Id</th>
 			<th>Name</th>
+			<th>Surname</th>
 			<th>Email</th>
 			<th>Phone</th>
+			<th>Görsel</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -24,8 +26,21 @@
 			<tr>
 				<td>@student.Id</td>
 				<td>@student.Name</td>
+				<td>@student.Surname</td>
 				<td>@student.Email</td>
 				<td>@student.Phone</td>
+				<td>
+
+					@if (!string.IsNullOrEmpty(student.ImgUrl))
+					{
+						<img src="@student.ImgUrl" alt="Yüklenen Resim" style="max-width: 200px; height: auto;" />
+					}
+					else
+					{
+						<p>Henüz bir resim yüklenmedi.</p>
+					}
+				
+				</td>
 				<td><a class="btn btn-primary" asp-controller="Students" asp-action="Edit" asp-route-id="@student.Id">Edit</a></td>
 			</tr>		
 		}
